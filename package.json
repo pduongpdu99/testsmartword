@@ -1,0 +1,12 @@
+{
+  "name": "smartfood-vercel",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "engines": {
+    "node": ">=20.x"
+  }
+}
