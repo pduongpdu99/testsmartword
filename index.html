@@ -238,6 +238,8 @@
   .menu-body { padding:1.25rem 1.5rem 1.5rem; }
   .menu-name { font-weight:700; font-size:1.1rem; color:var(--brown); margin-bottom:0.35rem; }
   .menu-desc { font-size:0.85rem; color:var(--text-muted); line-height:1.6; margin-bottom:1rem; }
+  .menu-nutrition { font-size:0.8rem; color:var(--green); font-weight:600; margin-bottom:0.5rem; }
+  .menu-method { font-size:0.8rem; color:var(--orange); font-weight:600; margin-bottom:1rem; }
   .menu-stem {
     display:flex; gap:0.4rem; flex-wrap:wrap; margin-bottom:1.25rem;
   }
@@ -427,12 +429,14 @@
 <nav>
   <div class="nav-logo">Smart<span>Food</span></div>
   <ul class="nav-links">
-    <li><a href="#stem">STEM</a></li>
+    <li><a href="#home">Trang chủ</a></li>
+    <li><a href="#about">Giới thiệu</a></li>
     <li><a href="#menu">Menu</a></li>
-    <li><a href="#process">Quy trình</a></li>
-    <li><a href="#queue">Đặt số</a></li>
+    <li><a href="#nutrition">Dinh dưỡng</a></li>
+    <li><a href="#process">Phương Pháp</a></li>
+    <li><a href="#queue">Order</a></li>
   </ul>
-  <button class="nav-btn" onclick="document.getElementById('queue').scrollIntoView({behavior:'smooth'})">🎫 Lấy số TT</button>
+  <button class="nav-btn" onclick="document.getElementById('queue').scrollIntoView({behavior:'smooth'})">🛒 Order ngay</button>
 </nav>
 
 <!-- HERO -->
@@ -444,8 +448,8 @@
     <h1>Smart<em>Food</em><br>Ẩm Thực<br>Công Nghệ</h1>
     <p class="hero-desc">Gian hàng ẩm thực kết hợp Khoa học – Công nghệ – Kỹ thuật – Toán học. Đặt hàng online, lấy số thứ tự thông minh, trải nghiệm ăn uống hiện đại.</p>
     <div class="hero-actions">
-      <a href="#menu" class="btn-primary">🍱 Xem thực đơn</a>
-      <a href="#queue" class="btn-secondary">🎫 Lấy số thứ tự</a>
+      <a href="#menu" class="btn-primary">�️ Xem Menu</a>
+      <a href="#queue" class="btn-secondary">🛒 Đặt hàng ngay</a>
     </div>
   </div>
   <div class="hero-float">
@@ -460,6 +464,233 @@
     <div class="food-card">
       <div class="food-icon">🧋</div>
       <div><div class="food-card-name">Trà sữa</div><div class="food-card-price">18.000đ</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT SECTION -->
+<section id="about">
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-label">Dự án SmartFood</div>
+      <h2 class="section-title">Ẩm Thực Thông Minh<br>Kết Hợp STEM</h2>
+      <p class="section-desc">Gian hàng ẩm thực sáng tạo, nơi khoa học gặp công nghệ. Khám phá dinh dưỡng, phương pháp chế biến khoa học và trải nghiệm đặt hàng thông minh.</p>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:2rem; margin-top:3rem;">
+      <div class="fade-in" style="text-align:center;">
+        <div style="font-size:3rem; margin-bottom:1rem;">🍽️</div>
+        <h3 style="font-family:'Playfair Display',serif; font-size:1.25rem; color:var(--brown); margin-bottom:0.5rem;">Menu Món Ăn</h3>
+        <p style="color:var(--text-muted); line-height:1.6;">5 món đặc trưng được chế biến thủ công, kết hợp hương vị truyền thống với khoa học hiện đại.</p>
+      </div>
+      <div class="fade-in" style="text-align:center;">
+        <div style="font-size:3rem; margin-bottom:1rem;">🥗</div>
+        <h3 style="font-family:'Playfair Display',serif; font-size:1.25rem; color:var(--brown); margin-bottom:0.5rem;">Dinh Dưỡng</h3>
+        <p style="color:var(--text-muted); line-height:1.6;">Phân tích chi tiết giá trị dinh dưỡng, giúp bạn lựa chọn món ăn phù hợp với sức khỏe.</p>
+      </div>
+      <div class="fade-in" style="text-align:center;">
+        <div style="font-size:3rem; margin-bottom:1rem;">🔬</div>
+        <h3 style="font-family:'Playfair Display',serif; font-size:1.25rem; color:var(--brown); margin-bottom:0.5rem;">Phương Pháp</h3>
+        <p style="color:var(--text-muted); line-height:1.6;">Áp dụng phương pháp chế biến khoa học theo sách giáo khoa, đảm bảo an toàn và chất lượng.</p>
+      </div>
+      <div class="fade-in" style="text-align:center;">
+        <div style="font-size:3rem; margin-bottom:1rem;">🛒</div>
+        <h3 style="font-family:'Playfair Display',serif; font-size:1.25rem; color:var(--brown); margin-bottom:0.5rem;">Order Online</h3>
+        <p style="color:var(--text-muted); line-height:1.6;">Đặt hàng thông minh với hệ thống real-time, theo dõi trạng thái đơn hàng tức thời.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU SECTION -->
+<section id="menu">
+  <div class="container">
+    <div class="menu-header fade-in">
+      <div>
+        <div class="section-label">Thực đơn hôm nay</div>
+        <h2 class="section-title">Menu Món Ăn<br>Dinh Dưỡng & Phương Pháp</h2>
+      </div>
+      <p class="section-desc" style="max-width:300px">Khám phá giá trị dinh dưỡng và phương pháp chế biến khoa học cho từng món ăn tươi ngon.</p>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-item fade-in">
+        <div class="menu-thumb c1">🌯<div class="menu-badge">Bán chạy</div></div>
+        <div class="menu-body">
+          <div class="menu-name">Cơm cuộn</div>
+          <div class="menu-desc">Cơm Nhật cuộn rong biển, nhân trứng chiên, thanh cua và rau củ tươi. Chấm sốt mayonnaise tự làm.</div>
+          <div class="menu-nutrition">Dinh dưỡng: Protein 12g, Carbs 50g, Fat 8g, Calories 320kcal</div>
+          <div class="menu-method">Phương pháp: Cuốn sushi truyền thống (Hosomaki)</div>
+          <div class="menu-stem">
+            <span class="tag tag-s">S: Tinh bột</span>
+            <span class="tag tag-e">E: Kỹ thuật cuộn</span>
+            <span class="tag tag-m">M: Định lượng</span>
+          </div>
+          <div class="menu-footer">
+            <div class="menu-price">15.000đ</div>
+            <button class="add-btn" onclick="addToQueue('Cơm cuộn', 15000)">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item fade-in">
+        <div class="menu-thumb c2">🍗</div>
+        <div class="menu-body">
+          <div class="menu-name">Chân gà sả tắc</div>
+          <div class="menu-desc">Chân gà ngâm muối sả ớt tắc tươi, vị chua cay đặc trưng. Ướp 4 tiếng trước khi phục vụ.</div>
+          <div class="menu-nutrition">Dinh dưỡng: Protein 25g, Carbs 5g, Fat 12g, Calories 220kcal</div>
+          <div class="menu-method">Phương pháp: Ủ lạnh axit citric (Marinade)</div>
+          <div class="menu-stem">
+            <span class="tag tag-s">S: Collagen, axit citric</span>
+            <span class="tag tag-t">T: Quy trình ướp</span>
+            <span class="tag tag-m">M: Thời gian & nhiệt độ</span>
+          </div>
+          <div class="menu-footer">
+            <div class="menu-price">20.000đ</div>
+            <button class="add-btn" onclick="addToQueue('Chân gà sả tắc', 20000)">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item fade-in">
+        <div class="menu-thumb c3">🥛<div class="menu-badge">Healthy</div></div>
+        <div class="menu-body">
+          <div class="menu-name">Sữa chua</div>
+          <div class="menu-desc">Sữa chua tự làm từ sữa tươi + men sống, ủ 8 tiếng ở 42°C. Mịn, mát và giàu probiotic tự nhiên.</div>
+          <div class="menu-nutrition">Dinh dưỡng: Protein 8g, Carbs 12g, Fat 3g, Probiotic cao</div>
+          <div class="menu-method">Phương pháp: Lên men lactic (Fermentation)</div>
+          <div class="menu-stem">
+            <span class="tag tag-s">S: Lên men lactic, pH</span>
+            <span class="tag tag-t">T: Kiểm soát nhiệt độ</span>
+            <span class="tag tag-m">M: Tỷ lệ pha chế</span>
+          </div>
+          <div class="menu-footer">
+            <div class="menu-price">12.000đ</div>
+            <button class="add-btn" onclick="addToQueue('Sữa chua', 12000)">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item fade-in">
+        <div class="menu-thumb c4">🍮</div>
+        <div class="menu-body">
+          <div class="menu-name">Flan (Bánh caramel)</div>
+          <div class="menu-desc">Flan trứng hấp cách thủy với lớp caramel vàng óng. Texture mịn như nhung, vị ngọt dịu thanh.</div>
+          <div class="menu-nutrition">Dinh dưỡng: Protein 6g, Carbs 25g, Fat 8g, Calories 180kcal</div>
+          <div class="menu-method">Phương pháp: Hấp cách thủy (Bain-marie)</div>
+          <div class="menu-stem">
+            <span class="tag tag-s">S: Protein biến tính nhiệt</span>
+            <span class="tag tag-e">E: Hấp cách thủy</span>
+            <span class="tag tag-m">M: Tỷ lệ trứng:sữa</span>
+          </div>
+          <div class="menu-footer">
+            <div class="menu-price">10.000đ</div>
+            <button class="add-btn" onclick="addToQueue('Flan', 10000)">+</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="menu-item fade-in">
+        <div class="menu-thumb c5">🧋<div class="menu-badge">Signature</div></div>
+        <div class="menu-body">
+          <div class="menu-name">Trà sữa</div>
+          <div class="menu-desc">Trà sữa pha thủ công từ trà ô long, sữa tươi và đường đen. Có topping trân châu đen nấu mềm.</div>
+          <div class="menu-nutrition">Dinh dưỡng: Protein 4g, Carbs 35g, Fat 5g, Caffeine 50mg</div>
+          <div class="menu-method">Phương pháp: Nhũ tương trà sữa (Emulsion)</div>
+          <div class="menu-stem">
+            <span class="tag tag-s">S: Chiết xuất tannin, nhũ tương</span>
+            <span class="tag tag-t">T: Pha chế tỷ lệ chuẩn</span>
+            <span class="tag tag-m">M: Tính giá thành</span>
+          </div>
+          <div class="menu-footer">
+            <div class="menu-price">18.000đ</div>
+            <button class="add-btn" onclick="addToQueue('Trà sữa', 18000)">+</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS SECTION -->
+<section class="process-bg" id="process">
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-label" style="color:var(--orange-light)">Phương pháp chế biến</div>
+      <h2 class="section-title">Quy Trình Khoa Học<br>Theo Sách Giáo Khoa</h2>
+      <p class="section-desc" style="color:rgba(255,255,255,0.6)">Sơ đồ quy trình chuẩn hoá cho từng món — áp dụng phương pháp chế biến khoa học từ sách giáo khoa Công nghệ và Kỹ thuật thực phẩm.</p>
+    </div>
+    <div class="process-tabs">
+      <button class="ptab active" onclick="showProcess('com')">🌯 Cơm cuộn</button>
+      <button class="ptab" onclick="showProcess('ga')">🍗 Chân gà</button>
+      <button class="ptab" onclick="showProcess('sua')">🥛 Sữa chua</button>
+      <button class="ptab" onclick="showProcess('flan')">🍮 Flan</button>
+      <button class="ptab" onclick="showProcess('tra')">🧋 Trà sữa</button>
+    </div>
+
+    <div id="proc-com" class="process-steps active fade-in">
+      <div class="step"><div class="step-num">1</div><div class="step-label">Chuẩn bị</div><div class="step-text">Vo gạo, nấu cơm Nhật, để nguội</div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-label">Sơ chế</div><div class="step-text">Cắt nhân, chiên trứng, luộc thanh cua</div></div>
+      <div class="step highlight"><div class="step-num">3</div><div class="step-label">Cuộn</div><div class="step-text">Trải nori, dàn đều cơm, xếp nhân, cuộn chặt</div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-label">Cắt lát</div><div class="step-text">Cắt 6–8 miếng bằng dao ướt</div></div>
+      <div class="step"><div class="step-num">5</div><div class="step-label">Phục vụ</div><div class="step-text">Bày đĩa, kèm sốt mayo, giao khách</div></div>
+    </div>
+    <div id="proc-ga" class="process-steps">
+      <div class="step"><div class="step-num">1</div><div class="step-label">Sơ chế</div><div class="step-text">Rửa chân gà, cắt móng, chần sơ với gừng</div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-label">Pha nước ngâm</div><div class="step-text">Trộn tắc, sả, ớt, muối, đường theo tỷ lệ</div></div>
+      <div class="step highlight"><div class="step-num">3</div><div class="step-label">Ngâm 4h</div><div class="step-text">Ngâm lạnh ở 4°C, ít nhất 4 giờ</div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-label">Kiểm tra</div><div class="step-text">Kiểm tra vị, thêm gia vị nếu cần</div></div>
+      <div class="step"><div class="step-num">5</div><div class="step-label">Đóng gói</div><div class="step-text">Cho vào hộp, dán nhãn, giao khách</div></div>
+    </div>
+    <div id="proc-sua" class="process-steps">
+      <div class="step"><div class="step-num">1</div><div class="step-label">Đun sữa</div><div class="step-text">Đun sữa tươi đến 90°C, để nguội 42°C</div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-label">Cho men</div><div class="step-text">Trộn đều men sữa chua vào sữa đã nguội</div></div>
+      <div class="step highlight"><div class="step-num">3</div><div class="step-label">Ủ 8 tiếng</div><div class="step-text">Giữ 42°C trong 8h – vi khuẩn lên men</div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-label">Làm lạnh</div><div class="step-text">Chuyển tủ lạnh 4°C để đông kết gel</div></div>
+      <div class="step"><div class="step-num">5</div><div class="step-label">Phục vụ</div><div class="step-text">Múc ra ly, thêm topping tuỳ chọn</div></div>
+    </div>
+    <div id="proc-flan" class="process-steps">
+      <div class="step"><div class="step-num">1</div><div class="step-label">Nấu caramel</div><div class="step-text">Đun đường đến 180°C tạo màu vàng nâu</div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-label">Hỗn hợp trứng</div><div class="step-text">Đánh 3 trứng + 250ml sữa + đường + vani</div></div>
+      <div class="step highlight"><div class="step-num">3</div><div class="step-label">Lọc & đổ khuôn</div><div class="step-text">Lọc qua rây mịn để loại bọt khí</div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-label">Hấp cách thủy</div><div class="step-text">Hấp 160°C trong 35 phút, đậy giấy bạc</div></div>
+      <div class="step"><div class="step-num">5</div><div class="step-label">Lạnh & úp</div><div class="step-text">Để nguội, lạnh 2h, úp ra đĩa</div></div>
+    </div>
+    <div id="proc-tra" class="process-steps">
+      <div class="step"><div class="step-num">1</div><div class="step-label">Pha trà</div><div class="step-text">Hãm trà ô long 90°C trong 3 phút</div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-label">Nấu trân châu</div><div class="step-text">Nấu trân châu 20 phút, ngâm đường đen</div></div>
+      <div class="step highlight"><div class="step-num">3</div><div class="step-label">Pha chế</div><div class="step-text">Lắc đều trà + sữa tươi + đường + đá viên</div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-label">Topping</div><div class="step-text">Thêm trân châu, kem cheese (tuỳ chọn)</div></div>
+      <div class="step"><div class="step-num">5</div><div class="step-label">Phục vụ</div><div class="step-text">Đóng nắp, cắm ống hút, giao khách</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- NUTRITION SECTION -->
+<section style="background: linear-gradient(135deg, #E8F5E9 0%, #F1F8E9 100%);" id="nutrition">
+  <div class="container">
+    <div class="fade-in">
+      <div class="section-label">Dinh dưỡng thông minh</div>
+      <h2 class="section-title">Giá Trị Dinh Dưỡng<br>Của Từng Món</h2>
+      <p class="section-desc">Phân tích chi tiết thành phần dinh dưỡng, giúp bạn lựa chọn món ăn phù hợp với nhu cầu sức khỏe và dinh dưỡng hàng ngày.</p>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:2rem; margin-top:3rem;">
+      <div class="fade-in" style="background:#fff; border-radius:16px; padding:2rem; border:1px solid var(--border);">
+        <div style="font-size:2rem; margin-bottom:1rem;">🥗</div>
+        <h3 style="font-family:'Playfair Display',serif; font-size:1.1rem; color:var(--brown); margin-bottom:0.5rem;">Món Ăn Healthy</h3>
+        <p style="color:var(--text-muted); line-height:1.6; margin-bottom:1rem;">Sữa chua, flan với hàm lượng protein cao, ít tinh bột, phù hợp cho người ăn kiêng hoặc cần tăng cơ.</p>
+        <div style="font-size:0.9rem; color:var(--green); font-weight:600;">Protein: 6-8g | Fat: 3-8g | Carbs: 12-25g</div>
+      </div>
+      <div class="fade-in" style="background:#fff; border-radius:16px; padding:2rem; border:1px solid var(--border);">
+        <div style="font-size:2rem; margin-bottom:1rem;">🍗</div>
+        <h3 style="font-family:'Playfair Display',serif; font-size:1.1rem; color:var(--brown); margin-bottom:0.5rem;">Món Ăn Nhanh Năng Lượng</h3>
+        <p style="color:var(--text-muted); line-height:1.6; margin-bottom:1rem;">Chân gà, cơm cuộn cung cấp protein và tinh bột, lý tưởng cho người vận động nhiều hoặc cần năng lượng.</p>
+        <div style="font-size:0.9rem; color:var(--orange); font-weight:600;">Protein: 12-25g | Fat: 8-12g | Carbs: 5-50g</div>
+      </div>
+      <div class="fade-in" style="background:#fff; border-radius:16px; padding:2rem; border:1px solid var(--border);">
+        <div style="font-size:2rem; margin-bottom:1rem;">🧋</div>
+        <h3 style="font-family:'Playfair Display',serif; font-size:1.1rem; color:var(--brown); margin-bottom:0.5rem;">Đồ Uống Giải Khát</h3>
+        <p style="color:var(--text-muted); line-height:1.6; margin-bottom:1rem;">Trà sữa với caffeine và đường, phù hợp cho những lúc cần tỉnh táo nhưng cần chú ý lượng đường.</p>
+        <div style="font-size:0.9rem; color:var(--gold); font-weight:600;">Carbs: 35g | Caffeine: 50mg | Calories: ~250kcal</div>
+      </div>
     </div>
   </div>
 </section>
@@ -521,173 +752,20 @@
   </div>
 </section>
 
-<!-- MENU SECTION -->
-<section id="menu">
-  <div class="container">
-    <div class="menu-header fade-in">
-      <div>
-        <div class="section-label">Thực đơn hôm nay</div>
-        <h2 class="section-title">5 Món Đặc Trưng</h2>
-      </div>
-      <p class="section-desc" style="max-width:300px">Tất cả được làm thủ công, tươi mỗi ngày bởi nhóm học sinh STEM.</p>
-    </div>
-    <div class="menu-grid">
-      <div class="menu-item fade-in">
-        <div class="menu-thumb c1">🌯<div class="menu-badge">Bán chạy</div></div>
-        <div class="menu-body">
-          <div class="menu-name">Cơm cuộn</div>
-          <div class="menu-desc">Cơm Nhật cuộn rong biển, nhân trứng chiên, thanh cua và rau củ tươi. Chấm sốt mayonnaise tự làm.</div>
-          <div class="menu-stem">
-            <span class="tag tag-s">S: Tinh bột</span>
-            <span class="tag tag-e">E: Kỹ thuật cuộn</span>
-            <span class="tag tag-m">M: Định lượng</span>
-          </div>
-          <div class="menu-footer">
-            <div class="menu-price">15.000đ</div>
-            <button class="add-btn" onclick="addToQueue('Cơm cuộn', 15000)">+</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="menu-item fade-in">
-        <div class="menu-thumb c2">🍗</div>
-        <div class="menu-body">
-          <div class="menu-name">Chân gà sả tắc</div>
-          <div class="menu-desc">Chân gà ngâm muối sả ớt tắc tươi, vị chua cay đặc trưng. Ướp 4 tiếng trước khi phục vụ.</div>
-          <div class="menu-stem">
-            <span class="tag tag-s">S: Collagen, axit citric</span>
-            <span class="tag tag-t">T: Quy trình ướp</span>
-            <span class="tag tag-m">M: Thời gian & nhiệt độ</span>
-          </div>
-          <div class="menu-footer">
-            <div class="menu-price">20.000đ</div>
-            <button class="add-btn" onclick="addToQueue('Chân gà sả tắc', 20000)">+</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="menu-item fade-in">
-        <div class="menu-thumb c3">🥛<div class="menu-badge">Healthy</div></div>
-        <div class="menu-body">
-          <div class="menu-name">Sữa chua</div>
-          <div class="menu-desc">Sữa chua tự làm từ sữa tươi + men sống, ủ 8 tiếng ở 42°C. Mịn, mát và giàu probiotic tự nhiên.</div>
-          <div class="menu-stem">
-            <span class="tag tag-s">S: Lên men lactic, pH</span>
-            <span class="tag tag-t">T: Kiểm soát nhiệt độ</span>
-            <span class="tag tag-m">M: Tỷ lệ pha chế</span>
-          </div>
-          <div class="menu-footer">
-            <div class="menu-price">12.000đ</div>
-            <button class="add-btn" onclick="addToQueue('Sữa chua', 12000)">+</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="menu-item fade-in">
-        <div class="menu-thumb c4">🍮</div>
-        <div class="menu-body">
-          <div class="menu-name">Flan (Bánh caramel)</div>
-          <div class="menu-desc">Flan trứng hấp cách thủy với lớp caramel vàng óng. Texture mịn như nhung, vị ngọt dịu thanh.</div>
-          <div class="menu-stem">
-            <span class="tag tag-s">S: Protein biến tính nhiệt</span>
-            <span class="tag tag-e">E: Hấp cách thủy</span>
-            <span class="tag tag-m">M: Tỷ lệ trứng:sữa</span>
-          </div>
-          <div class="menu-footer">
-            <div class="menu-price">10.000đ</div>
-            <button class="add-btn" onclick="addToQueue('Flan', 10000)">+</button>
-          </div>
-        </div>
-      </div>
-
-      <div class="menu-item fade-in">
-        <div class="menu-thumb c5">🧋<div class="menu-badge">Signature</div></div>
-        <div class="menu-body">
-          <div class="menu-name">Trà sữa</div>
-          <div class="menu-desc">Trà sữa pha thủ công từ trà ô long, sữa tươi và đường đen. Có topping trân châu đen nấu mềm.</div>
-          <div class="menu-stem">
-            <span class="tag tag-s">S: Chiết xuất tannin, nhũ tương</span>
-            <span class="tag tag-t">T: Pha chế tỷ lệ chuẩn</span>
-            <span class="tag tag-m">M: Tính giá thành</span>
-          </div>
-          <div class="menu-footer">
-            <div class="menu-price">18.000đ</div>
-            <button class="add-btn" onclick="addToQueue('Trà sữa', 18000)">+</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROCESS SECTION -->
-<section class="process-bg" id="process">
-  <div class="container">
-    <div class="fade-in">
-      <div class="section-label" style="color:var(--orange-light)">Quy trình thực hiện</div>
-      <h2 class="section-title">Từ Nguyên Liệu<br>Đến Thành Phẩm</h2>
-      <p class="section-desc" style="color:rgba(255,255,255,0.6)">Sơ đồ quy trình chuẩn hoá cho từng món — áp dụng kiến thức Công nghệ và Kỹ thuật thực phẩm.</p>
-    </div>
-    <div class="process-tabs">
-      <button class="ptab active" onclick="showProcess('com')">🌯 Cơm cuộn</button>
-      <button class="ptab" onclick="showProcess('ga')">🍗 Chân gà</button>
-      <button class="ptab" onclick="showProcess('sua')">🥛 Sữa chua</button>
-      <button class="ptab" onclick="showProcess('flan')">🍮 Flan</button>
-      <button class="ptab" onclick="showProcess('tra')">🧋 Trà sữa</button>
-    </div>
-
-    <div id="proc-com" class="process-steps active fade-in">
-      <div class="step"><div class="step-num">1</div><div class="step-label">Chuẩn bị</div><div class="step-text">Vo gạo, nấu cơm Nhật, để nguội</div></div>
-      <div class="step"><div class="step-num">2</div><div class="step-label">Sơ chế</div><div class="step-text">Cắt nhân, chiên trứng, luộc thanh cua</div></div>
-      <div class="step highlight"><div class="step-num">3</div><div class="step-label">Cuộn</div><div class="step-text">Trải nori, dàn đều cơm, xếp nhân, cuộn chặt</div></div>
-      <div class="step"><div class="step-num">4</div><div class="step-label">Cắt lát</div><div class="step-text">Cắt 6–8 miếng bằng dao ướt</div></div>
-      <div class="step"><div class="step-num">5</div><div class="step-label">Phục vụ</div><div class="step-text">Bày đĩa, kèm sốt mayo, giao khách</div></div>
-    </div>
-    <div id="proc-ga" class="process-steps">
-      <div class="step"><div class="step-num">1</div><div class="step-label">Sơ chế</div><div class="step-text">Rửa chân gà, cắt móng, chần sơ với gừng</div></div>
-      <div class="step"><div class="step-num">2</div><div class="step-label">Pha nước ngâm</div><div class="step-text">Trộn tắc, sả, ớt, muối, đường theo tỷ lệ</div></div>
-      <div class="step highlight"><div class="step-num">3</div><div class="step-label">Ngâm 4h</div><div class="step-text">Ngâm lạnh ở 4°C, ít nhất 4 giờ</div></div>
-      <div class="step"><div class="step-num">4</div><div class="step-label">Kiểm tra</div><div class="step-text">Kiểm tra vị, thêm gia vị nếu cần</div></div>
-      <div class="step"><div class="step-num">5</div><div class="step-label">Đóng gói</div><div class="step-text">Cho vào hộp, dán nhãn, giao khách</div></div>
-    </div>
-    <div id="proc-sua" class="process-steps">
-      <div class="step"><div class="step-num">1</div><div class="step-label">Đun sữa</div><div class="step-text">Đun sữa tươi đến 90°C, để nguội 42°C</div></div>
-      <div class="step"><div class="step-num">2</div><div class="step-label">Cho men</div><div class="step-text">Trộn đều men sữa chua vào sữa đã nguội</div></div>
-      <div class="step highlight"><div class="step-num">3</div><div class="step-label">Ủ 8 tiếng</div><div class="step-text">Giữ 42°C trong 8h – vi khuẩn lên men</div></div>
-      <div class="step"><div class="step-num">4</div><div class="step-label">Làm lạnh</div><div class="step-text">Chuyển tủ lạnh 4°C để đông kết gel</div></div>
-      <div class="step"><div class="step-num">5</div><div class="step-label">Phục vụ</div><div class="step-text">Múc ra ly, thêm topping tuỳ chọn</div></div>
-    </div>
-    <div id="proc-flan" class="process-steps">
-      <div class="step"><div class="step-num">1</div><div class="step-label">Nấu caramel</div><div class="step-text">Đun đường đến 180°C tạo màu vàng nâu</div></div>
-      <div class="step"><div class="step-num">2</div><div class="step-label">Hỗn hợp trứng</div><div class="step-text">Đánh 3 trứng + 250ml sữa + đường + vani</div></div>
-      <div class="step highlight"><div class="step-num">3</div><div class="step-label">Lọc & đổ khuôn</div><div class="step-text">Lọc qua rây mịn để loại bọt khí</div></div>
-      <div class="step"><div class="step-num">4</div><div class="step-label">Hấp cách thủy</div><div class="step-text">Hấp 160°C trong 35 phút, đậy giấy bạc</div></div>
-      <div class="step"><div class="step-num">5</div><div class="step-label">Lạnh & úp</div><div class="step-text">Để nguội, lạnh 2h, úp ra đĩa</div></div>
-    </div>
-    <div id="proc-tra" class="process-steps">
-      <div class="step"><div class="step-num">1</div><div class="step-label">Pha trà</div><div class="step-text">Hãm trà ô long 90°C trong 3 phút</div></div>
-      <div class="step"><div class="step-num">2</div><div class="step-label">Nấu trân châu</div><div class="step-text">Nấu trân châu 20 phút, ngâm đường đen</div></div>
-      <div class="step highlight"><div class="step-num">3</div><div class="step-label">Pha chế</div><div class="step-text">Lắc đều trà + sữa tươi + đường + đá viên</div></div>
-      <div class="step"><div class="step-num">4</div><div class="step-label">Topping</div><div class="step-text">Thêm trân châu, kem cheese (tuỳ chọn)</div></div>
-      <div class="step"><div class="step-num">5</div><div class="step-label">Phục vụ</div><div class="step-text">Đóng nắp, cắm ống hút, giao khách</div></div>
-    </div>
-  </div>
-</section>
-
 <!-- QUEUE SECTION -->
 <section class="queue-section" id="queue">
   <div class="container">
     <div class="fade-in" style="margin-bottom:3rem">
-      <div class="section-label">Công nghệ thông minh</div>
-      <h2 class="section-title">Lấy Số Thứ Tự<br>Online</h2>
-      <p class="section-desc">Đăng ký online, nhận số thứ tự tự động. Không cần xếp hàng chờ đợi — công nghệ giải quyết!</p>
+      <div class="section-label">Đặt hàng thông minh</div>
+      <h2 class="section-title">Order Online<br>Real-time</h2>
+      <p class="section-desc">Đặt món online, theo dõi trạng thái real-time. Công nghệ SSE đảm bảo cập nhật tức thời không cần refresh.</p>
       <div style="margin-top:1rem">
         <span id="sseStatus" style="font-size:0.8rem;font-weight:600;color:var(--text-muted);background:rgba(61,31,10,0.06);padding:4px 12px;border-radius:50px;border:1px solid var(--border)">🟡 Đang kết nối…</span>
       </div>
     </div>
     <div class="queue-wrap">
       <div class="queue-form fade-in">
-        <h3>📝 Đặt món & Lấy số</h3>
+        <h3>� Đặt món & Order</h3>
         <div class="form-group">
           <label>Họ tên của bạn</label>
           <input type="text" id="custName" placeholder="VD: Nguyễn Văn A">
@@ -706,7 +784,7 @@
           <label>Số lượng</label>
           <input type="number" id="custQty" value="1" min="1" max="5">
         </div>
-        <button class="submit-btn" onclick="registerQueue()">🎫 Lấy số thứ tự ngay</button>
+        <button class="submit-btn" onclick="registerQueue()">🛒 Đặt hàng ngay</button>
       </div>
 
       <div class="queue-display fade-in">
