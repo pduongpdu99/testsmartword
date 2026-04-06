@@ -89,7 +89,6 @@ export default async function handler(req, res) {
   }
 
   // ── Broadcast to all SSE clients ─────────────────────────────────────────
-  broadcast("state", await getState());
   broadcast("toast", { num: toastNum, msg: toastMsg });
 
   console.log(`[BROADCAST] action=${action} | clients=${clientCount()}`);
