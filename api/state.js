@@ -5,7 +5,7 @@
 
 import { getState, clientCount } from "../lib/store.js";
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
   res.setHeader("Access-Control-Allow-Origin", "*");
 
   if (req.method === "OPTIONS") {
@@ -19,7 +19,7 @@ export default function handler(req, res) {
   }
 
   return res.status(200).json({
-    ...getState(),
+    ...(await getState()),
     connectedClients: clientCount(),
   });
 }

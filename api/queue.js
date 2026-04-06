@@ -10,7 +10,7 @@
 
 import { getState, setState, broadcast, clientCount } from "../lib/store.js";
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
   if (req.method !== "POST") {
     return res.status(405).json({ error: "Method not allowed" });
   }
@@ -50,7 +50,8 @@ export default function handler(req, res) {
         };
       });
 
-      const { counter } = getState();
+      const state = await getState();
+      const { counter } = state;
       toastNum = `#${String(counter).padStart(3, "0")}`;
       toastMsg = `${name.trim()} – Đã lấy số thứ tự!`;
       console.log(`[REGISTER] ${toastNum} – ${dish}`);
@@ -58,7 +59,7 @@ export default function handler(req, res) {
     }
 
     case "next": {
-      const current = getState();
+      const current = await getState();
       const nextItem = current.queue.find((q) => q.num > current.serving);
 
       if (!nextItem) {
@@ -88,14 +89,14 @@ export default function handler(req, res) {
   }
 
   // ── Broadcast to all SSE clients ─────────────────────────────────────────
-  broadcast("state", getState());
+  broadcast("state", await getState());
   broadcast("toast", { num: toastNum, msg: toastMsg });
 
   console.log(`[BROADCAST] action=${action} | clients=${clientCount()}`);
 
   return res.status(200).json({
     ok: true,
-    state: getState(),
+    state: await getState(),
     toast: { num: toastNum, msg: toastMsg },
   });
 }

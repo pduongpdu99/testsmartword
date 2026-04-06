@@ -10,6 +10,7 @@
     "node": ">=20.x"
   },
   "dependencies": {
-    "@upstash/redis": "^1.37.0"
+    "@upstash/redis": "^1.37.0",
+    "ioredis": "^5.10.1"
   }
 }
