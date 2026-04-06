@@ -34,9 +34,7 @@ export default function handler(req, res) {
   res.flushHeaders(); // flush immediately so browser starts reading
 
   // ── Send current state to this client right away ─────────────────────────
-  res.write(
-    `event: state\ndata: ${JSON.stringify(getState())}\n\n`
-  );
+  res.write(`event: state\ndata: ${JSON.stringify(getState())}\n\n`);
 
   // ── Keep-alive ping every 20 s (prevents proxy/browser timeout) ──────────
   const ping = setInterval(() => {
@@ -53,7 +51,9 @@ export default function handler(req, res) {
   req.on("close", () => {
     clearInterval(ping);
     unregisterClient(clientId);
-    console.log(`[SSE] Client ${clientId} disconnected | remaining: ${clientCount()}`);
+    console.log(
+      `[SSE] Client ${clientId} disconnected | remaining: ${clientCount()}`,
+    );
   });
 
   console.log(`[SSE] Client ${clientId} connected | total: ${clientCount()}`);
